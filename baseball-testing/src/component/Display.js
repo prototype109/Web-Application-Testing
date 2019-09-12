@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Dashboard from './Dashboard';
 
 export const Display = () => {
     const [balls, setBalls] = useState(0);
@@ -10,6 +11,10 @@ export const Display = () => {
             <p>{balls}</p>
             <h1>strikes: </h1>
             <p>{strikes}</p>
+            <Dashboard setBalls={setBalls} 
+                       setStrikes={setStrikes} 
+                       balls={balls} 
+                       strikes={strikes} />
         </div>
     )
 }
