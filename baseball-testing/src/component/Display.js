@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import Dashboard from './Dashboard';
+import { Dashboard } from './Dashboard';
 
-export const Display = () => {
+export default() => {
     const [balls, setBalls] = useState(0);
     const [strikes, setStrikes] = useState(0);
 
     return(
         <div>
             <h1>balls: </h1>
-            <p>{balls}</p>
+            <p data-testid='balls'>{balls}</p>
             <h1>strikes: </h1>
-            <p>{strikes}</p>
+            <p data-testid='strikes'>{strikes}</p>
             <Dashboard setBalls={setBalls} 
                        setStrikes={setStrikes} 
                        balls={balls} 
